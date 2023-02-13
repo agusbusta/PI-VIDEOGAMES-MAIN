@@ -1,9 +1,9 @@
-//<-------IMPORTACIONES--------->
+//<----------IMPORTACIONES------------>
 require('dotenv').config();
 const axios = require('axios');
 const { Videogame, Genre } = require('../db');
 const { API_KEY } = process.env;
-//-------------------------->
+//------------------------------>
 
 
 //<-------Traer Informacion de la API--------->
