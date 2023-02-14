@@ -5,6 +5,7 @@ const { API_KEY } = process.env;
 //------------------------------------>
 
 //<-----------TRAER DETALLE DE JUEGO POR ID DESDE API------------>
+
 const getDetailGame = async (idGame) => {
 	let gamesApi = await axios.get(
 		`https://api.rawg.io/api/games/${idGame}?key=${API_KEY}`
