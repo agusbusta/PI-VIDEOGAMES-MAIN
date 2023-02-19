@@ -1,14 +1,14 @@
 //<-----------IMPORTACIONES------------>
-require('dotenv').config();
+
 const axios = require('axios');
-const { API_KEY } = process.env;
+
 //------------------------------------>
 
 //<-----------TRAER DETALLE DE JUEGO POR ID DESDE API------------>
 
 const getDetailGame = async (idGame) => {
 	let gamesApi = await axios.get(
-		`https://api.rawg.io/api/games/${idGame}?key=${API_KEY}`
+		`https://api.rawg.io/api/games/${idGame}?key=$0fed0efdb6d9440fa875db594b9142cf`
 	);
 
 	const {

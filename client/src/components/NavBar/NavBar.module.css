@@ -1,0 +1,8 @@
+.headerContainer{
+    background-color: transparent;
+}
+
+.buttonCreateGame{
+    display: flex;
+    flex-direction: row;
+}

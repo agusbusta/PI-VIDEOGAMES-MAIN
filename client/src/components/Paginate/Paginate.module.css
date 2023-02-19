@@ -1,0 +1,24 @@
+.paginadoNavContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .paginadoList {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .number {
+    font-size: 18px;
+    font-stretch: condensed;
+    margin: 0 5px;
+    color: #d874ff;
+    padding: 3px;
+  }
+
+  .paginadoNavContainer:hover{
+  cursor: pointer;
+  }

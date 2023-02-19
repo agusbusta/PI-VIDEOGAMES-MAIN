@@ -1,0 +1,28 @@
+.cardContainer{
+    padding: 10px;
+    border: 3px solid #bc80ea;
+    border-radius: 12px;
+}
+
+.cardContainer:hover{
+    border: 3px solid #dfbdfa;
+    transform: scale(1.05);
+}
+
+.gameImg{
+    width: 350px;
+    height: 250px;
+    border-radius: 12px;
+}
+
+.detailContainer{
+    font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+h3, h4{
+    text-decoration: none;
+}

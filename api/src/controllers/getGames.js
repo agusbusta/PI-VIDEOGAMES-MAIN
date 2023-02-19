@@ -1,5 +1,5 @@
 //<----------IMPORTACIONES------------>
-require('dotenv').config();
+
 const axios = require('axios');
 const { Videogame, Genre } = require('../db');
 
@@ -7,6 +7,7 @@ const { Videogame, Genre } = require('../db');
 
 
 //<-------Traer Informacion de la API--------->
+
 const getApiInformation = async ()  => {
     try {
         const games = [];

@@ -1,0 +1,31 @@
+.filtersContainer{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 5px;
+}
+
+.selectStyle{
+    padding: 3px;
+    background-color: transparent;
+    margin: 5px;
+    color: white;
+    font-size: 12px;
+    border-radius: 12px;
+    outline: none;
+}
+
+.allgamesBtn{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 12px;
+    font-size: 12px;
+    width: 120px;
+}
+
+.allgamesBtn:hover{
+    background-color: #d874ff;
+}

@@ -1,13 +1,14 @@
 //<--------------IMPORTACIONES / DECLARACIONES --------------------->
+
 const { Router } = require('express');
 const getAllGames = require('../controllers/getGames')
 const { Videogame, Genre } = require('../db');
 const router = Router();
 
-//------------------------------------------------->
+//---------------------------------------------->
 
 
-//<--------------RUTA GET--------------------->
+//<----------------RUTA GET--------------------->
 
 router.get('/', async (req, res) => {
     try {
@@ -32,12 +33,11 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        let { name, image, released, rating, platforms, description, createdInDb, genres } =
+        let { name, image, rating, platforms, description, createdInDb, genres } =
         req.body;
         let gameCreated = await Videogame.create({
 			name,
 			image,
-			released,
 			rating,
 			platforms,
 			description,
@@ -47,7 +47,7 @@ router.post('/', async (req, res) => {
 			where: { name: genres },
 		});
         gameCreated.addGenre(genresDatabase);
-		res.status(201).send('game created successfully');
+		res.status(200).send('game created successfully');
     } catch (error) {
         res.status(400).send({ error: error.message });
     }

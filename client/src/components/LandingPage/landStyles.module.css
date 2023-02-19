@@ -1,0 +1,50 @@
+.landingBody{
+    background-image: url("../../assets/formimg.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+
+.tituloCont{
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-sizing: border-box;
+    padding: 20px;
+    width: 600px;
+    display: flex;
+    justify-content: center; 
+  }
+
+  .tituloCont:hover{
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #d874ff,
+    0 0 0.8rem #d874ff,
+    0 0 2.8rem #d874ff,
+    inset 0 0 1.3rem #d874ff;
+  }
+
+.enterStyle{
+    color: whitesmoke;
+    margin: 0;
+  }
+
+.enterStyle:hover{
+    color: #fff;
+}
