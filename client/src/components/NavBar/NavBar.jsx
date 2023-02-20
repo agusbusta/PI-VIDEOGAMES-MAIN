@@ -1,7 +1,12 @@
+//<------------------IMPORTACIONES---------------------->
+
 import React from 'react';
 import SeachBar from '../SearchBar/SearchBar';
 import style  from './NavBar.module.css';
-import Title from '../Title/Tittle';
+
+//<------------------------------------------------------>
+
+//<------------------COMPONENTE NAVBAR---------------------->
 
 export default function NavBar() {
 	return (
@@ -10,3 +15,5 @@ export default function NavBar() {
 		</div>
 	);
 }
+
+//<------------------------------------------------------>

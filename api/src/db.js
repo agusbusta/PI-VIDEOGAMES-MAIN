@@ -11,7 +11,7 @@ const path = require('path');
 
 //-----------------------------------------------
 
-//<---DECLARACION DESTRUCTURING DE VARIABLES DE ENTORNO--->
+//<---DECLARACION DE VARIABLES DE ENTORNO--->
 
 require('dotenv').config();
 

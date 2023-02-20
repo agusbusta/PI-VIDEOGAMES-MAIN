@@ -1,7 +1,13 @@
+//<-------------------IMPORTACIONES---------------------->
+
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getNameGames, getAllGames } from '../../redux/actions';
 import style from './SearchBar.module.css'
+
+//<------------------------------------------------------>
+
+//<----------------COMPONENTE SEARCHBAR------------------->
 
 export default function SeachBar() {
 	
@@ -36,3 +42,7 @@ export default function SeachBar() {
 		</div>
 	);
 }
+
+
+
+//<------------------------------------------------------>

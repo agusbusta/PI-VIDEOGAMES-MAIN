@@ -1,5 +1,11 @@
+//<-------------IMPORTACIONES------------------->
+
 import React from 'react';
 import style from './Paginate.module.css';
+
+//<------------------------------------------------------>
+
+//<-------------------COMPONENTE PAGINATE----------------------->
 
 export default function Paginate({ gamesPerPage, allGames, pages }) {
 	const pageNumbers = [];
@@ -21,3 +27,5 @@ export default function Paginate({ gamesPerPage, allGames, pages }) {
 		</nav>
 	);
 }
+
+//<------------------------------------------------------>

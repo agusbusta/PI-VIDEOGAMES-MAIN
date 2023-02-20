@@ -1,6 +1,12 @@
+//<---------------IMPORTACIONES------------------->
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './Title.module.css'
+
+//<------------------------------------------------------>
+
+//<-----------------COMPONENTE TITLE------------------>
 
 export default function Title() {
 	return (
@@ -11,3 +17,5 @@ export default function Title() {
 		</div>
 	);
 }
+
+//<------------------------------------------------------>
