@@ -45,10 +45,16 @@ export default function GameCreateForm() {
 	};
 
 	const handleChange = (e) => {
-		setInput({
-			...input,
-			[e.target.name]: e.target.value,
-		});
+		const property=e.target.name;
+        const value=e.target.value;
+		if(property!='genres'){
+            if(property!='platforms')setInput({...input,[property]:value})
+            else{setInput({...input,platforms:input.platforms.concat(value)})}
+        }
+		else{const index=e.target.selectedIndex+1;
+			setInput({...input,genres:input.genres.concat(index)});
+			}
+		
 			setErrors(
 			validate({
 				...input,
@@ -57,7 +63,6 @@ export default function GameCreateForm() {
 		); 
 		
 	};
-
 
 
 	const handleSelectGenres = (e) => {
@@ -96,8 +101,8 @@ export default function GameCreateForm() {
 			image: input.image,
 			released: input.released,
 			rating: input.rating,
-			platforms: input.platforms.join(', '),
-			genres: input.genres.join(', '),
+			platforms: input.platforms, 
+			genres: input.genres,
 			
 		};
 
@@ -234,7 +239,7 @@ export default function GameCreateForm() {
 					)}
 				</form>
 			</div>
-			<Footer />
+
 		</div>
 	</>
 	);

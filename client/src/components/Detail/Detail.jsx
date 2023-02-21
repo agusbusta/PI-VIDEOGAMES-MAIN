@@ -34,8 +34,8 @@ export default function Detail(props) {
 				<img src={myGame.image ? myGame.image : myGame.img} alt='' />
 			  </div>
 			  <div className={style.detailContainer}>
-				<p>Platforms: {myGame.platforms.join(' - ')}</p>
-				<p>Genres: {myGame.genres.join(' - ')}</p>
+				<p>Platforms: {myGame.platforms}</p>
+				<p>Genres: {myGame.genres}</p>
 				<p>Rating: {myGame.rating}</p>
 				<p>Released: {myGame.released}</p>
 			  </div>

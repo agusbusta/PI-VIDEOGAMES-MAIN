@@ -33,8 +33,7 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        let { name, image, rating, platforms, description, createdInDb, genres } =
-        req.body;
+        let { name, image, rating, platforms, description, createdInDb, genres } = req.body;
         let gameCreated = await Videogame.create({
 			name,
 			image,

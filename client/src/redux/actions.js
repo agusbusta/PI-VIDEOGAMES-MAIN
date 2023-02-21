@@ -96,11 +96,13 @@ export const getGenres = () => {
 };
 
 export const postGame = (payload) => {
+	console.log(payload);
 	return async function (dispatch) {
 		try {
 			const response = await axios.post('http://localhost:3001/videogames', payload);
 			dispatch({
 				type: POST_GAME,
+				payload: response.data,
 			});
 		} catch (error) {
 			dispatch({
