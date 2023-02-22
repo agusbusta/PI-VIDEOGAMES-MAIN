@@ -1,4 +1,5 @@
 .footerContainer{
+    background-color: black;
     height: 60px;
     width: 98%;
     margin: 1%;
@@ -11,10 +12,12 @@
 }
 
 .footerText{
+    background-color: black;
     color: #9752cc;
 }
 
 .iconLinks{
+    
     padding: 5px;
     text-decoration: none;
     color: #fff;

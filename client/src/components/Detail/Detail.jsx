@@ -17,7 +17,7 @@ export default function Detail(props) {
 
 	const dispatch = useDispatch();
 	const myGame = useSelector((store) => store.detail);
-
+	console.log(myGame);
 	useEffect(() => {
 		dispatch(getDetails(props.match.params.id));
 		return () => {
@@ -26,29 +26,30 @@ export default function Detail(props) {
 	}, [dispatch]);
 
 	return (
-		<div className={style.detailCardContainer}>
+		<>
 		  <Title />
+		<div className={style.detailContainer}>
 		  {myGame && Object.keys(myGame).length ? (
-			<div className={style.divContainer}>
+			<div className={style.detailCardlContainer}>
 			  <div className={style.imgContainer}>
-				<img src={myGame.image ? myGame.image : myGame.img} alt='' />
+				<img className={style.detailImg} src={myGame.data.image ? myGame.data.image : myGame.data.img} alt='' />
 			  </div>
-			  <div className={style.detailContainer}>
-				<p>Platforms: {myGame.platforms}</p>
-				<p>Genres: {myGame.genres}</p>
-				<p>Rating: {myGame.rating}</p>
-				<p>Released: {myGame.released}</p>
+			  <div className={style.detailDataContainer}>
+			  <h1 className={style.textPName}>{myGame.data.name}</h1>
+			  <p className={style.textP}>Platforms: {myGame.data.platforms.join(' - ')}</p>
+				<p className={style.textP}>Genres: {myGame.data.genres}</p>
+				<p className={style.textP}>Rating: {myGame.data.rating}</p>
+				<p className={style.textP}>Released: {myGame.data.released}</p>
 			  </div>
-			  <h1 className={style.detailName}>{myGame.name}</h1>
-			  <p className={style.detailGameDesc}>{myGame.description}</p>
+			  <p className={style.textPDesc}>{myGame.data.description}</p>
 			</div>
 		  ) : (
 			  <Loader />
 		  )}
-		  <Footer />
 		</div>
+		  </>
 	  );
-		  }	  
+	}	  
 
 //----------------------------------------------------->
 

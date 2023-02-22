@@ -63,7 +63,7 @@ export default function Filters({ setCurrentPage, setOrden }) {
 		setCurrentPage(1);
 	};
 
-    //<--CREATED FILTER-->
+    //<--CREATED STORAGE FILTER-->
 
 	const handleFilterCreated = (e) => {
 		e.preventDefault();
