@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { postGame, getGenres } from '../../redux/actions';
 import  style  from './GameCreator.module.css';
 import Title from '../Title/Tittle';
-import Footer from '../Footer/Footer';
 
 //----------------------------------------------------->
 
@@ -228,15 +227,10 @@ export default function GameCreateForm() {
 							})}{' '}
 						</div>
 					</div>
-					{Object.keys(errors).length ? (
 						<div>
-							<input className={style.submitBtn} type='submit' disabled name='Send' />
+							<input className={style.submitBtn}  type='submit' disabled={ !input.name || !input.description || !input.platforms } name='Send' />
 						</div>
-					) : (
-						<div>
-							<input className={style.submitBtn}  type='submit' name='Send' />
-						</div>
-					)}
+					
 				</form>
 			</div>
 
