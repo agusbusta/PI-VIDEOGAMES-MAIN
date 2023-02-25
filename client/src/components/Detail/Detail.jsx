@@ -17,7 +17,8 @@ export default function Detail(props) {
 
 	const dispatch = useDispatch();
 	const myGame = useSelector((store) => store.detail);
-	console.log(myGame);
+	
+
 	useEffect(() => {
 		dispatch(getDetails(props.match.params.id));
 		return () => {

@@ -12,7 +12,7 @@ import Title from '../Title/Tittle';
 //------------COMPONENTE GAME CREATOR------------------>
 
 export default function GameCreateForm() {
-
+	
 	const dispatch = useDispatch();
 	const history = useHistory();
 	const genres = useSelector((state) => state.genres);
@@ -34,9 +34,21 @@ export default function GameCreateForm() {
 
 	const validate = (input) => {
 		const errors = {};
-		if (!input.name.length) errors.name = 'Name is required!!';
-		if (!input.description.length) errors.description = 'Description is required!!';
-		if (!input.rating.length) errors.rating = 'rating is required!!';
+		const regex = /^[a-zA-Z]+$/;
+		const ratingRegex = /^[0-5]$/;
+
+		if (!input.name.length || !regex.test(input.value)) {
+		  errors.name = 'Name is required and should only contain letters from A to Z!';
+		}
+		if (!input.description.length || !regex.test(input.value)) {
+			errors.description = 'Description is required and should only contain letters from A to Z, numbers from 0 to 9!';
+		}
+		if (!input.rating.length || !ratingRegex.test(input.value)) {
+		errors.rating = 'Rating is required and should only contain numbers from 0 to 5!';
+		}
+		if(!input.platforms[0]) {
+			errors.platform = 'Please select at least one platform';
+		}
 		if (!input.genres[0]) {
 			errors.genres = 'Minimun one Genre is required ';
 		}
@@ -44,6 +56,7 @@ export default function GameCreateForm() {
 	};
 
 	const handleChange = (e) => {
+
 		const property=e.target.name;
         const value=e.target.value;
 		if(property!='genres'){
@@ -106,6 +119,7 @@ export default function GameCreateForm() {
 		};
 
 		dispatch(postGame(newGame));
+		
 		setInput({
 			name: '',
 			description: '',
