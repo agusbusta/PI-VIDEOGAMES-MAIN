@@ -194,7 +194,7 @@ export default function GameCreateForm() {
 						<input
 							className={style.formInput}
 							type='number'
-							step='0.1'
+							step='1'
 							min='0'
 							max='5'
 							name='rating'

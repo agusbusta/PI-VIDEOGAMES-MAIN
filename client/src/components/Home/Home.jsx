@@ -25,6 +25,7 @@ export default function Home(){
         const [order, setOrder] = useState('');
         const [currentPage, setCurrentPage] = useState(1);
 		const [gamesPerPage, setGamesPerPage] = useState(15);
+		const [showFilters, setShowFilters] = useState(true);
 
 
         const indexOfLastGame = currentPage * gamesPerPage; 
@@ -35,8 +36,10 @@ export default function Home(){
             setCurrentPage(pageNumber);
         }
 
+
         useEffect(() => {
             dispatch(getAllGames());
+			
         }, [dispatch]);
 
         return (
@@ -46,43 +49,47 @@ export default function Home(){
 				</div>
                 <div className={style.navBarContainer}>
                     <NavBar />
-						</div>
-				    {currentGames.length > 0 ? (
-						<Filters setCurrentPage={setCurrentPage} setOrden={setOrder}></Filters>
-						) : null}
-				    <Paginate gamesPerPage={gamesPerPage} allGames={allGames.length} pages={pages} />
-                <div className={style.cardsContainer}>
-                {currentGames.length ? (
-					currentGames?.map((e) => {
-						return (
-							<Link style={{textDecoration:'none'}} to={'/detail/' + e.id}>
-								<Card
-									key={e.id}
-									name={e.name}
-									image={e.image}
-									rating={e.rating}
-									genres={e.genres}
-								/>
-							</Link>
-						);
-					})
-				) : (
-						<Loader />
-				)}
-			</div>
-			<div>
-				<hr className={style.barras}></hr>
-				<div className={style.createGameCont}>
-				<h3 className={style.gamecreatorText}>Want to create your own game?</h3>
-				<Link to='/create'>
-					<button className={style.buttonCreateGame}>CREATE A GAME</button>
-				</Link>
+                </div>
+				<div className={style.filtersContainer}>
+					<button className={style.showFiltersBtn} onClick={() => setShowFilters(!showFilters)}>
+						Filters
+					</button>
+					{showFilters && <Filters setCurrentPage={setCurrentPage} setOrden={setOrder} />}
 				</div>
-			<hr ></hr>
+				<Paginate gamesPerPage={gamesPerPage} allGames={allGames.length} pages={pages} />
+                <div className={style.cardsContainer}>
+                	{currentGames.length ? (
+						currentGames?.map((e) => {
+							return (
+								<Link style={{textDecoration:'none'}} to={'/detail/' + e.id}>
+									<Card
+										key={e.id}
+										name={e.name}
+										image={e.image}
+										rating={e.rating}
+										genres={e.genres}
+									/>
+								</Link>
+							);
+						})
+					) : (
+						<Loader />
+					)}
+				</div>
+				<div>
+					<hr className={style.barras}></hr>
+					<div className={style.createGameCont}>
+						<h3 className={style.gamecreatorText}>Want to create your own game?</h3>
+						<Link to='/create'>
+							<button className={style.buttonCreateGame}>CREATE A GAME</button>
+						</Link>
+					</div>
+					<hr ></hr>
+				</div>
+				<Footer />
 			</div>
-			<Footer />
-		</div>
-	);
+		);
 }
 
 //----------------------------------------------------->
+

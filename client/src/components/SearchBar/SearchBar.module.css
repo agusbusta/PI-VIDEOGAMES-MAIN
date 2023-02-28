@@ -57,3 +57,18 @@
 	position:relative;
 	top:1px;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .searchBtn {
+      width: 80px;
+      height: 30px;
+      font-size: 12px;
+      padding: 3px 10px;
+    }
+    .searcher {
+        width: 55%;
+        padding: 0;
+      }
+  }
+  

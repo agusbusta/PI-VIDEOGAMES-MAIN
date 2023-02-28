@@ -1,10 +1,12 @@
-.filtersContainer{
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    padding: 5px;
+.filtersContainer {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding: 5px;
+  width: 96%; 
 }
+
 
 .selectStyle{
     padding: 3px;
@@ -29,3 +31,26 @@
 .allgamesBtn:hover{
     background-color: #d874ff;
 }
+
+@media screen and (max-width: 768px) {
+  
+    .filtersContainer {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  
+    .allgamesBtn {
+      width: 30%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      
+    }
+  
+    .selectStyle {
+      width: 100%;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+  }
+  

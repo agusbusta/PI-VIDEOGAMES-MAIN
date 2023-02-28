@@ -1,50 +1,63 @@
 .landingBody{
-    background-image: url("../../assets/formimg.jpg");
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
+  background-image: url("../../assets/formimg.jpg");
+  background-size: cover;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.tituloCont{
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 0 .2rem #fff,
+  0 0 .2rem #fff,
+  0 0 2rem #bc13fe,
+  0 0 0.8rem #bc13fe,
+  0 0 2.8rem #bc13fe,
+  inset 0 0 1.3rem #bc13fe;
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-sizing: border-box;
+  padding: 20px;
+  width: 300px;
+  max-width: 600px;
+  display: flex;
+  justify-content: center; 
+}
+
+.tituloCont:hover{
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 0 .2rem #fff,
+  0 0 .2rem #fff,
+  0 0 2rem #d874ff,
+  0 0 0.8rem #d874ff,
+  0 0 2.8rem #d874ff,
+  inset 0 0 1.3rem #d874ff;
+}
+
+.enterStyle{
+  color: whitesmoke;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.enterStyle:hover{
+  color: #fff;
 }
 
 
-
-.tituloCont{
-    background: rgba(255, 255, 255, 0.19);
-    border-radius: 16px;
-    box-shadow: 0 0 .2rem #fff,
-    0 0 .2rem #fff,
-    0 0 2rem #bc13fe,
-    0 0 0.8rem #bc13fe,
-    0 0 2.8rem #bc13fe,
-    inset 0 0 1.3rem #bc13fe;
-    backdrop-filter: blur(7.1px);
-    -webkit-backdrop-filter: blur(7.1px);
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    box-sizing: border-box;
-    padding: 20px;
-    width: 600px;
-    display: flex;
-    justify-content: center; 
+@media (max-width: 768px) {
+  /* Agregar reglas CSS para pantallas con ancho máximo de 768px */
+  .tituloCont {
+    width: 300px; /* Reducir el ancho del contenedor del título */
+    padding: 10px; /* Reducir el relleno del contenedor del título */
   }
 
-  .tituloCont:hover{
-    background: rgba(255, 255, 255, 0.19);
-    border-radius: 16px;
-    box-shadow: 0 0 .2rem #fff,
-    0 0 .2rem #fff,
-    0 0 2rem #d874ff,
-    0 0 0.8rem #d874ff,
-    0 0 2.8rem #d874ff,
-    inset 0 0 1.3rem #d874ff;
+  .enterStyle {
+    font-size: 1.2rem; /* Reducir el tamaño de fuente del texto del botón */
   }
-
-.enterStyle{
-    color: whitesmoke;
-    margin: 0;
-  }
-
-.enterStyle:hover{
-    color: #fff;
 }

@@ -20,7 +20,6 @@
     border-radius: 12px;
     border: 3px solid #bc80ea;
     color: whitesmoke;
-    
 }
 .gameCreatorContainer:hover{
     border: 3px solid #d296ff;
@@ -77,3 +76,51 @@
     flex-direction:column;
 
 }
+
+@media only screen and (max-width: 768px) {
+   .gameCreatorContainer {
+	width: 650px;
+	height: 600px;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 5px;
+    border-radius: 12px;
+    border: 3px solid #bc80ea;
+    color: whitesmoke;
+    }
+    .formDiv{
+        padding: 10px;
+    }
+    .submitBtn{
+        box-shadow:inset 0px 1px 0px 0px #efdcfb;
+        background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+        background-color:#dfbdfa;
+        border-radius:12px;
+        border:1px solid #c584f3;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #9752cc;
+        width: 350px;
+        margin-top: 30px;
+    
+    }
+    
+    .submitBtn:hover {
+        background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+        background-color:#bc80ea;
+    }
+   
+  }
+ 
+  
+  

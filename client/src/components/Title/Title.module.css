@@ -15,3 +15,16 @@
 	flex-direction: column;
 }
 
+
+@media (max-width: 768px) {
+	.titleGlobal{
+		position: absolute;
+		font-family: 'Press Start 2P';
+		color: #d874ff;
+		display: flex;
+		margin-top: 8%;
+		margin-left: 4%;
+		text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+				 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+	}
+  }
