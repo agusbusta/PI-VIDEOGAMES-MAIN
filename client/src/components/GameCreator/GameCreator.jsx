@@ -35,25 +35,26 @@ export default function GameCreateForm() {
 	const validate = (input) => {
 		const errors = {};
 		const regex = /^[a-zA-Z]+$/;
-		const ratingRegex = /^[0-5]$/;
 
+	  
 		if (!input.name.length || !regex.test(input.value)) {
 		  errors.name = 'Name is required and should only contain letters from A to Z!';
 		}
 		if (!input.description.length || !regex.test(input.value)) {
-			errors.description = 'Description is required and should only contain letters from A to Z, numbers from 0 to 9!';
+		  errors.description = 'Description is required and should only contain letters from A to Z, numbers from 0 to 9!';
 		}
-		if (!input.rating.length || !ratingRegex.test(input.value)) {
-		errors.rating = 'Rating is required and should only contain numbers from 0 to 5!';
+		if (!input.rating.length) {
+		  errors.rating = 'Rating is required and should only contain numbers from 0 to 5!';
 		}
-		if(!input.platforms[0]) {
-			errors.platform = 'Please select at least one platform';
+		if (!input.platforms[0]) {
+		  errors.platform = 'Please select at least one platform';
 		}
 		if (!input.genres[0]) {
-			errors.genres = 'Minimun one Genre is required ';
+		  errors.genres = 'Minimun one Genre is required ';
 		}
 		return errors;
-	};
+	  };
+	  
 
 	const handleChange = (e) => {
 
@@ -61,7 +62,7 @@ export default function GameCreateForm() {
         const value=e.target.value;
 		if(property!='genres'){
             if(property!='platforms')setInput({...input,[property]:value})
-            else{setInput({...input,platforms:input.platforms.concat(value)})}
+            else{setInput({ ...input, platforms: [value] })}
         }
 		else{const index=e.target.selectedIndex+1;
 			setInput({...input,genres:input.genres.concat(index)});
@@ -242,7 +243,7 @@ export default function GameCreateForm() {
 						</div>
 					</div>
 						<div>
-							<input className={style.submitBtn}  type='submit' disabled={ !input.name || !input.description || !input.platforms } name='Send' />
+							<input className={style.submitBtn}  type='submit' disabled={ !input.name || !input.description || !input.platforms || !input.rating } name='Send' />
 						</div>
 					
 				</form>
